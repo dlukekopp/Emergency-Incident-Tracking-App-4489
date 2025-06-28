@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #dc2626;
+  --secondary-color: #991b1b;
+  --accent-color: #fef2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Dynamic color utility classes */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-secondary {
+  border-color: var(--secondary-color);
+}
+
+/* Focus ring colors */
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--primary-color);
+}
+
+/* Hover effects */
+.hover\:bg-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Button variants with dynamic colors */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+}
+
+/* Dynamic navigation active state */
+.nav-active {
+  background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
+  color: var(--primary-color);
+  border-right: 4px solid var(--primary-color);
+}
+
+/* Custom scrollbar with theme colors */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Enhanced button styles with theme colors */
+.btn-theme-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-theme-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-theme-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-theme-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Form input focus states with theme colors */
+.input-theme:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
+/* Status badges with theme integration */
+.status-active {
+  background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+  color: var(--primary-color);
+}
+
+/* Loading spinner with theme color */
+.spinner-theme {
+  border: 2px solid color-mix(in srgb, var(--primary-color) 20%, transparent);
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Alert and notification styles with theme colors */
+.alert-theme {
+  background-color: color-mix(in srgb, var(--primary-color) 5%, transparent);
+  border-left: 4px solid var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Card hover effects with theme colors */
+.card-theme:hover {
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--primary-color) 15%, transparent);
+  border-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
+}
+
+/* Progress bars with theme colors */
+.progress-theme {
+  background-color: color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+.progress-theme-fill {
+  background-color: var(--primary-color);
+}
+
+/* Tab navigation with theme colors */
+.tab-active {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Toggle switches with theme colors */
+.toggle-theme:checked {
+  background-color: var(--primary-color);
+}
+
+/* Dropdown and select elements with theme colors */
+.select-theme:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
+/* Theme-aware shadows */
+.shadow-theme {
+  box-shadow: 0 1px 3px color-mix(in srgb, var(--primary-color) 12%, transparent),
+              0 1px 2px color-mix(in srgb, var(--primary-color) 6%, transparent);
+}
+
+.shadow-theme-lg {
+  box-shadow: 0 10px 15px color-mix(in srgb, var(--primary-color) 10%, transparent),
+              0 4px 6px color-mix(in srgb, var(--primary-color) 5%, transparent);
+}
